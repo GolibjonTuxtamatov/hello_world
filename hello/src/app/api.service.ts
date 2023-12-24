@@ -11,4 +11,8 @@ export class ApiService {
                 console.log(responce);
             })
     }
+
+    getQuestions(){
+        return this.http.get('https://localhost:44308/api/questions');
+    }
 }
