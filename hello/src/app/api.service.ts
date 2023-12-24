@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
     constructor(private http:HttpClient){}
 
-    postQuestion(question:string){
-        this.http.post('',question)
+    postQuestion(question:any){
+        this.http.post('https://localhost:44308/api/questions',question)
             .subscribe(responce => {
                 console.log(responce);
             })

@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuestionComponent } from './question.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { QuestionComponent } from './question.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatSlideToggleModule,
     MatButtonModule,
     MatInputModule,
@@ -27,7 +30,8 @@ import { QuestionComponent } from './question.component';
     FormsModule 
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    ApiService
   ],
   bootstrap: [AppComponent]
 })
